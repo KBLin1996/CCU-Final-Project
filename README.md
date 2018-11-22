@@ -2,10 +2,10 @@
 
 **Producing 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
 
-**Execute:** CUDA_VISIBLE_DEVICES='0' python train_conditional_wgan.py --dataset Clothes_Final/
+**Execute:** CUDA_VISIBLE_DEVICES='0' python train_wgan.py --dataset Clothes_Final/
  --width 256 --height 256 channels 3 --z_dim 100 --batch_size 8 --epochs 3000 --preview_iteration 693 --std 1.0
  
- **Produce Output:** CUDA_VISIBLE_DEVICES='0' python3 inference_acgan.py TEST/ Logo/  tags.csv --model weights128x128-1.h5 --batch_size 1 --std 0.8 --n 100
+ **Produce Output:** CUDA_VISIBLE_DEVICES='0' python3 acgan.py TEST/ Logo/  tags.csv --model weights128x128-1.h5 --batch_size 1 --std 0.8 --n 100
  
 ---
 
@@ -38,3 +38,23 @@
 **--model weights128x128-1.h5** → Your .h5 file (Located in a directory called "Preview_Project")
 
 **--std 0.8** → How blur is your ouput images (From 0~1)
+
+---
+
+**Discriminator Structure**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Discriminator.PNG)
+
+**Generator Structure**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Generator.PNG)
+
+---
+
+**Result (Epoch 300)**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch300.PNG)
+
+**Result (Epoch 400)**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch400.PNG)
