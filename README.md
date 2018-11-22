@@ -58,3 +58,9 @@
 **Result (Epoch 400)**
 
 ![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch400.PNG)
+
+---
+
+**Training Loss**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Loss.PNG)
