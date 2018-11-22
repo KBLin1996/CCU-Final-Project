@@ -1,4 +1,4 @@
-# CCU-Final-Project
+# CCU_Final_Project
 
 **Producing 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
 
