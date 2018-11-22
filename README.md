@@ -1,13 +1,15 @@
 # CCU-Final-Project
 
-**Producing 256*256 output images with 2000 epochs, your code should be implemented as below ↓**
+**Producing 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
 
 **Execute:** CUDA_VISIBLE_DEVICES='0' python train_conditional_wgan.py --dataset Clothes_Final/
- --width 256 --height 256 channels 3 --z_dim 100 --batch_size 8 --epochs 2000 --preview_iteration 693 --std 1.0
+ --width 256 --height 256 channels 3 --z_dim 100 --batch_size 8 --epochs 3000 --preview_iteration 693 --std 1.0
  
- **Produce Output:** CUDA_VISIBLE_DEVICES='2' python3 inference_acgan.py TEST/ Logo  tags.csv --model weights128x128-1.h5 --batch_size 1 --std 0.8 --n 100
+ **Produce Output:** CUDA_VISIBLE_DEVICES='0' python3 inference_acgan.py TEST/ Logo/  tags.csv --model weights128x128-1.h5 --batch_size 1 --std 0.8 --n 100
+ 
 ---
-**Instructions:**
+
+**Instructions in Execute:**
 
 **CUDA_VISIBLE_DEVICES='0'** → Means to use GPU='0'
 
@@ -19,6 +21,20 @@
 
 **--z_dim 100** → Sampling from 100 dimension's normal distribution
 
-**--batch_size 8** → 
+**--batch_size 8** → Batch size (How many images a batch)
 
+**--epochs 3000** → Epochs (Run how many times)
 
+**--preview_iteration 693** → How many batchs preview once
+ 
+---
+
+**Instructions in Produce Output:**
+
+**TEST/** → Your output directory's destination
+
+**Logo/** → What catagory do you want to produce
+
+**--model weights128x128-1.h5** → Your .h5 file (Located in a directory called "Preview_Project")
+
+**--std 0.8** → How blur is your ouput images (From 0~1)
