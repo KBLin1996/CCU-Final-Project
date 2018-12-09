@@ -2,6 +2,8 @@
 
 **To produce 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
 
+**DataSet:** https://drive.google.com/drive/folders/1G3q5rrmCao5kboao904vhaSjsVr_O4Vi?usp=sharing
+
 **Execute:** CUDA_VISIBLE_DEVICES='0' python train_wgan.py --dataset Clothes_Final/
  --width 256 --height 256 channels 3 --z_dim 100 --batch_size 8 --epochs 3000 --preview_iteration 693 --std 1.0
  
