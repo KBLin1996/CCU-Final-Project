@@ -53,13 +53,13 @@
 
 ---
 
-**Result (Epoch 300)**
-
-![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch300.PNG)
-
 **Result (Epoch 400)**
 
 ![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch400.PNG)
+
+**Result (Epoch 2900)**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch%202900.jpg)
 
 ---
 
