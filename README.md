@@ -1,6 +1,6 @@
 # CCU Final Project
 
-***Clothes DataSet Download:** https://drive.google.com/drive/folders/1G3q5rrmCao5kboao904vhaSjsVr_O4Vi?usp=sharing
+***Clothes DataSet Download:** https://drive.google.com/drive/folders/1G3q5rrmCao5kboao904vhaSjsVr_O4Vi?usp=sharing***
 
 **To produce 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
 
