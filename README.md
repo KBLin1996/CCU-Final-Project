@@ -1,5 +1,7 @@
 # CCU Final Project
 
+**Overall: Implement a model that used WGAN to generate man's clothes by itself**
+
 ***Clothes DataSet Download:** https://drive.google.com/drive/folders/1G3q5rrmCao5kboao904vhaSjsVr_O4Vi?usp=sharing*
 
 **To produce 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
@@ -60,6 +62,10 @@
 **Result (Epoch 2900)**
 
 ![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch%202900.jpg)
+
+**Result (Epoch 1 ~ 3100, Preview Variety)**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project_WGAN/blob/master/1~3100Epochs.gif)
 
 ---
 
