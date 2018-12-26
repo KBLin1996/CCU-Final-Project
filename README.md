@@ -3,7 +3,9 @@
 **Overall: Implement a model that used WGAN to generate man's clothes by itself**
 
 ***Clothes DataSet Download:** https://drive.google.com/drive/folders/1G3q5rrmCao5kboao904vhaSjsVr_O4Vi?usp=sharing*
- 
+
+**Reference:** https://github.com/peter0749/WGAN-GP-Anime-with-Auxiliary-Classifier
+
 ---
 
 **To produce 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
