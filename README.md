@@ -8,10 +8,10 @@
 
 ---
 
-**To produce 256*256 output images with 3000 epochs, your code should be implemented as below ↓**
+**To produce 256*256 output images with 4000 epochs, your code should be implemented as below ↓**
 
 **Execute:** CUDA_VISIBLE_DEVICES='0' python train_wgan.py --dataset Clothes_Final/
- --width 256 --height 256 channels 3 --z_dim 100 --batch_size 8 --epochs 3000 --preview_iteration 693 --std 1.0
+ --width 256 --height 256 channels 3 --z_dim 100 --batch_size 8 --epochs 4000 --preview_iteration 693 --std 1.0
  
 **Produce Output (Create new clothes in directory "Final"):** CUDA_VISIBLE_DEVICES='0' python3 output.py Final/ Logo tags.csv --model weights128x128-1.h5 --batch_size 1 --std 0.8 --n 100
  
@@ -31,7 +31,7 @@
 
 **--batch_size 8** → Batch size (How many images a batch)
 
-**--epochs 3000** → Epochs (Run how many times)
+**--epochs 4000** → Epochs (Run how many times)
 
 **--preview_iteration 693** → How many batchs preview once
  
