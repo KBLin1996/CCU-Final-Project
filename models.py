@@ -58,6 +58,7 @@ def gradient_penalty_loss(y_pred, averaged_samples, gradient_penalty_weight):
     # return the mean as loss over all the batch samples
     return K.mean(gradient_penalty)
 
+# f=output dimensions, filter=(k, k), act=activation function=NONE, padding='same' (surrounding images with 0s -> make output have the same size)
 def conv(f, k=3, stride=1, act=None, pad='same'):
     return Conv2D(f, (k, k), strides=(stride,stride), activation=act, kernel_initializer='he_normal', padding=pad)
 
