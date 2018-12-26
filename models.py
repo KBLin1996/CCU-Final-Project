@@ -21,12 +21,10 @@ def RandomWeightedAverage():
         return (weights * input1) + ((1 - weights) * input2)
     return Lambda(block)
 
-'''
-def set_trainable(model, trainable):
+"""def set_trainable(model, trainable):
     for layer in model.layers:
         layer.trainable=trainable
-    model.trainable=trainable
-'''
+    model.trainable=trainable"""
 
 def gradient_penalty_loss(y_pred, averaged_samples, gradient_penalty_weight):
     """Calculates the gradient penalty loss for a batch of "averaged" samples.
