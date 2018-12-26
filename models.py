@@ -21,6 +21,7 @@ def RandomWeightedAverage():
         return (weights * input1) + ((1 - weights) * input2)
     return Lambda(block)
 
+# How to set trainable
 """def set_trainable(model, trainable):
     for layer in model.layers:
         layer.trainable=trainable
