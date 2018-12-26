@@ -67,6 +67,10 @@
 
 ![image](https://github.com/KBLin1996/CCU-Final-Project/blob/master/Epoch%202900.jpg)
 
+**Result (Epoch 3094)**
+
+![image](https://github.com/KBLin1996/CCU-Final-Project_WGAN/blob/master/Epoch3094.jpg)
+
 **Result (Epoch 1 ~ 3100, Preview Variety)**
 
 ![image](https://github.com/KBLin1996/CCU-Final-Project_WGAN/blob/master/1~3100Epochs.gif)
