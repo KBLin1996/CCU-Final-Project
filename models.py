@@ -14,6 +14,9 @@ from pixel_shuffler import PixelShuffler
 import tensorflow as tf
 from weightnorm import AdamWithWeightnorm
 
+# Improve GAN Reference: https://github.com/keras-team/keras-contrib/blob/master/examples/improved_wgan.py
+
+# Merge Function
 def RandomWeightedAverage():
     def block(input_list):
         input1, input2 = input_list
