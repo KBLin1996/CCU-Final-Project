@@ -22,7 +22,7 @@ def RandomWeightedAverage():
         input1, input2 = input_list
         weights = K.random_uniform((K.shape(input1)[0], 1, 1, 1))
         return (weights * input1) + ((1 - weights) * input2)
-    return Lambda(block)
+    return Lambda(block) # Just changing the data in this layer, and also, the layer has no parameter to learn
 
 # How to set trainable
 """def set_trainable(model, trainable):
@@ -94,10 +94,10 @@ def residual_discriminator(h=128, w=128, c=3, k=4, dropout_rate=0.1, as_classifi
     inputs = Input(shape=(h,w,c)) # 32x32@c
 
     # block 1:
-    x = conv(32, k, 1, pad='same') (inputs) # 32x32@32. stride=1 -> reduce checkboard artifacts
+    x = conv(32, k, 1, pad='same') (inputs) # 32x32@32, filter 4x4, stride=1 -> reduce checkboard's artifacts
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
-    x = conv(64, k, 2, pad='same') (x) # 16x16@64
+    x = conv(64, k, 2, pad='same') (x) # 16x16@64, stride=2
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
     
@@ -138,10 +138,10 @@ def residual_encoder(h=128, w=128, c=3, latent_dim=100, k=4, dropout_rate=0.1):
     inputs = Input(shape=(h,w,c)) # 32x32@c
 
     # block 1:
-    x = conv(32, k, 1, pad='same') (inputs) # 32x32@32. stride=1 -> reduce checkboard artifacts
+    x = conv(32, k, 1, pad='same') (inputs) # 32x32@32, stride=1 -> reduce checkboard artifacts
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
-    x = conv(64, k, 2, pad='same') (x) # 16x16@64
+    x = conv(64, k, 2, pad='same') (x) # 16x16@64, stride=2
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
     
@@ -181,7 +181,7 @@ def residual_decoder(h, w, c=3, k=4, latent_dim=2, dropout_rate=0.1):
     x = Dropout(dropout_rate) (x) # prevent overfitting
     
     x = up_bilinear() (x) # 4x4@512
-    x = Conv2DTranspose(128, k, padding='same') (x) # 4x4@128
+    x = Conv2DTranspose(128, k, padding='same') (x) # 4x4@128, strides=(1, 1)
     x = LeakyReLU(0.2) (x)
     
     x = up_bilinear() (x) # 8x8@128
