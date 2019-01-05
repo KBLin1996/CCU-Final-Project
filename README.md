@@ -1,8 +1,8 @@
 # CCU Final Project
 
-**Overall: Implement a model that used WGAN to generate man's clothes by itself**
-
 ***Clothes DataSet Download:** https://drive.google.com/drive/folders/1G3q5rrmCao5kboao904vhaSjsVr_O4Vi?usp=sharing*
+
+**Overall: Implement a model that used WGAN to generate man's clothes by itself**
 
 **Reference:** https://github.com/peter0749/WGAN-GP-Anime-with-Auxiliary-Classifier
 
