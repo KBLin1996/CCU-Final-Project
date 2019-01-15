@@ -128,7 +128,10 @@ def residual_discriminator(h=128, w=128, c=3, k=4, dropout_rate=0.1, as_classifi
     
     hidden = Flatten() (x) # 2*2*512
     
-    if as_classifier>0:
+    if as_classifier>0:  # as_classifier means the number of dimensions of output units
+                         # kernel_regularizer prevents the model from overfitting, it adds penalities toward enormous weights and presents it's efficiency on large data
+                         # kernel_initializer='he_normal' -> initialized as normal distribution
+                         # (hidden) -> Dense's input data, (batch_size, input_dim)
         out = Dense(as_classifier, kernel_regularizer=l2(0.001), kernel_initializer='he_normal', activation='softmax') (hidden)
     else:
         out = Dense(1, kernel_regularizer=l2(0.001), kernel_initializer='he_normal') (hidden)
