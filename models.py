@@ -104,19 +104,20 @@ def residual_discriminator(h=128, w=128, c=3, k=4, dropout_rate=0.1, as_classifi
     h1 = x
     
     # block 2:
-    x = conv(128, k, 2, pad='same') (x) # 8x8@128
+    x = conv(128, k, 2, pad='same') (x) # 64x64@128, padding = 'valid' -> new_height = new_width = (Width — Filter + 1) / Strides
+                                        #          padding = 'same' -> new_height = new_width = ceil(Width / Strides)
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
     
     # block 3:
-    x = conv(256, k, 2) (x) # 4x4@256
+    x = conv(256, k, 2) (x) # 32x32@256
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
     
     h2 = x
     
     # block 3:
-    x = conv(256, k, 2) (x) # 2x2@256
+    x = conv(256, k, 2) (x) # 16x216@256
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
     
