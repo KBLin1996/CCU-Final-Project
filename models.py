@@ -91,12 +91,12 @@ def up_bilinear():
 
 def residual_discriminator(h=128, w=128, c=3, k=4, dropout_rate=0.1, as_classifier=0, return_hidden=False):
 
-    inputs = Input(shape=(h,w,c)) # 32x32@c
+    inputs = Input(shape=(h,w,c)) # 128x128@3
 
     # block 1:
-    x = conv(32, k, 1, pad='same') (inputs) # 32x32@32, filter 4x4, stride=1 -> reduce checkboard's artifacts
-    x = LeakyReLU(0.2) (x)
-    x = Dropout(dropout_rate) (x)
+    x = conv(32, k, 1, pad='same') (inputs) # 128x128@32, filter 4x4, stride=1 -> reduce checkboard's artifacts
+    x = LeakyReLU(0.2) (x) # Why LeakyRelu? -> 1. Less computing time 2. Make output non-linear 3. Prevent vanishing gradient && overfitting
+    x = Dropout(dropout_rate) (x) # Prevent overfitting
     x = conv(64, k, 2, pad='same') (x) # 16x16@64, stride=2
     x = LeakyReLU(0.2) (x)
     x = Dropout(dropout_rate) (x)
